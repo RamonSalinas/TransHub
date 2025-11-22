@@ -64,6 +64,8 @@ sistema-monitoramento-atrasos/
 │   ├── views/
 │   └── assets/
 └── tests/
+```
+
 🚀 Instalação e Configuração
 Pré-requisitos
 Docker & Docker Compose
