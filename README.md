@@ -1,59 +1,254 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+📊 Sistema de Monitoramento de Atrasos
+https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+🚀 Sobre o Projeto
+Sistema desenvolvido em Laravel com Sail para monitoramento e gestão de atrasos em processos empresariais. Oferece uma solução completa para identificar, acompanhar e resolver pendências de forma eficiente.
 
-## About Laravel
+https://via.placeholder.com/800x400/4F46E5/FFFFFF?text=Dashboard+Monitoramento+Atrasos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+✨ Funcionalidades Principais
+📋 Gestão de Atrasos
+✅ Cadastro de Ocorrências
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+⏰ Monitoramento em Tempo Real
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+📈 Relatórios e Estatísticas
 
-## Learning Laravel
+🔔 Sistema de Notificações
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+👥 Gestão de Usuários
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+🛠️ Tecnologias Utilizadas
+Tecnologia	Versão	Finalidade
+Laravel	10.x	Framework Principal
+Sail	1.x	Ambiente Docker
+MySQL	8.0	Banco de Dados
+Redis	7.x	Cache e Filas
+Bootstrap	5.x	Frontend
+Chart.js	4.x	Gráficos
+🏗️ Estrutura do Projeto
+text
+sistema-monitoramento-atrasos/
+├── app/
+│   ├── Models/
+│   │   ├── Atraso.php
+│   │   ├── Usuario.php
+│   │   └── Projeto.php
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   └── Requests/
+│   └── Services/
+├── config/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── resources/
+│   ├── views/
+│   └── assets/
+└── tests/
+🚀 Como Executar o Projeto
+Pré-requisitos
+Docker
 
-## Laravel Sponsors
+Docker Compose
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Git
 
-### Premium Partners
+📥 Instalação Passo a Passo
+1. Clone o repositório
+bash
+git clone https://github.com/seu-usuario/sistema-monitoramento-atrasos.git
+cd sistema-monitoramento-atrasos
+2. Configure o ambiente
+bash
+# Copie o arquivo de ambiente
+cp .env.example .env
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+# Instale as dependências do PHP
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
+3. Inicie os containers
+bash
+./vendor/bin/sail up -d
+4. Execute as configurações iniciais
+bash
+# Gerar chave da aplicação
+./vendor/bin/sail artisan key:generate
 
-## Contributing
+# Executar migrações
+./vendor/bin/sail artisan migrate --seed
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Instalar dependências NPM
+./vendor/bin/sail npm install
+./vendor/bin/sail npm run dev
+5. Acesse a aplicação
+🌐 URL: http://localhost
 
-## Code of Conduct
+👤 Credenciais padrão:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Email: admin@sisatrasos.com
 
-## Security Vulnerabilities
+Senha: password123
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+🐳 Comandos Sail Úteis
+Comando	Descrição
+sail up -d	Inicia os containers
+sail down	Para os containers
+sail artisan [comando]	Executa comandos Artisan
+sail npm [comando]	Executa comandos NPM
+sail shell	Acessa o container
+sail logs	Visualiza logs
+📊 Funcionalidades em Destaque
+Dashboard Principal
+https://via.placeholder.com/600x300/7E22CE/FFFFFF?text=Visualiza%C3%A7%C3%A3o+de+Metricas
 
-## License
+Visão geral de atrasos
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Gráficos interativos
+
+Métricas em tempo real
+
+Filtros por período
+
+Gestão de Atrasos
+https://via.placeholder.com/600x300/0EA5E9/FFFFFF?text=Lista+de+Atrasos
+
+Cadastro intuitivo
+
+Classificação por prioridade
+
+Acompanhamento de status
+
+Histórico completo
+
+🗃️ Estrutura do Banco de Dados
+https://via.placeholder.com/600x400/10B981/FFFFFF?text=Diagrama+Entidade-Relacionamento
+
+Principais tabelas:
+
+atrasos - Registro de ocorrências
+
+usuarios - Gestão de usuários
+
+projetos - Cadastro de projetos
+
+notificacoes - Sistema de alertas
+
+🧪 Testes
+Executar testes unitários
+bash
+./vendor/bin/sail test
+Executar testes com cobertura
+bash
+./vendor/bin/sail test --coverage
+🔧 Configuração de Desenvolvimento
+Variáveis de Ambiente Importantes
+env
+APP_NAME="Sistema Monitoramento Atrasos"
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=monitoramento
+DB_USERNAME=sail
+DB_PASSWORD=password
+
+REDIS_HOST=redis
+📈 Roadmap de Desenvolvimento
+✅ Concluído
+Estrutura base Laravel + Sail
+
+Sistema de autenticação
+
+CRUD de atrasos
+
+Dashboard básico
+
+🚧 Em Desenvolvimento
+Relatórios avançados
+
+Sistema de notificações
+
+API REST
+
+Exportação de dados
+
+📅 Planejado
+App mobile
+
+Integração com e-mail
+
+Análises preditivas
+
+Painel administrativo
+
+🤝 Contribuição
+Como contribuir?
+Fork o projeto
+
+Crie uma branch: git checkout -b feature/nova-funcionalidade
+
+Commit suas mudanças: git commit -m 'Add nova funcionalidade'
+
+Push para a branch: git push origin feature/nova-funcionalidade
+
+Abra um Pull Request
+
+Padrões de Código
+bash
+# Verificar padrões
+./vendor/bin/sail artisan code:analyse
+
+# Formatar código
+./vendor/bin/sail artisan code:format
+🐛 Reportar Bugs
+Encontrou um problema? Abra uma issue com:
+
+Descrição detalhada
+
+Passos para reproduzir
+
+Comportamento esperado vs atual
+
+Screenshots (se aplicável)
+
+📄 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
+
+👨‍💻 Desenvolvedor
+Seu Nome
+
+GitHub: @seu-usuario
+
+Email: seu.email@exemplo.com
+
+📞 Suporte
+Precisa de ajuda?
+
+📧 Email: suporte@sisatrasos.com
+
+🐛 Issues: GitHub Issues
+
+📚 Documentação: Wiki do Projeto
+
+<div align="center">
+⭐️ Não esqueça de dar uma estrela no repositório se este projeto te ajudou!
+
+https://via.placeholder.com/800/1F2937/FFFFFF?text=Sistema+de+Monitoramento+de+Atrasos+-+Gest%C3%A3o+Eficiente+de+Pend%C3%AAncias
+
+</div>
+🎯 Status do Projeto
+https://img.shields.io/badge/Status-Em%2520Desenvolvimento-yellow
+https://img.shields.io/badge/Vers%C3%A3o-1.0.0-blue
+https://img.shields.io/badge/%C3%9Altima%2520Atualiza%C3%A7%C3%A3o-Novembro%25202023-green
+
+Próxima atualização: Sistema de notificações em tempo real 🚀
