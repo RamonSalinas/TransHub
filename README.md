@@ -84,22 +84,24 @@ cd sistema-monitoramento-atrasos
 cp .env.example .env
 
 # 3. Instale as dependências PHP
+```
 docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v "$(pwd):/var/www/html" \
     -w /var/www/html \
     laravelsail/php82-composer:latest \
     composer install --ignore-platform-reqs
-
+```
 # 4. Inicie os containers
 ./vendor/bin/sail up -d
 
 # 5. Configure a aplicação
+```
 ./vendor/bin/sail artisan key:generate
 ./vendor/bin/sail artisan migrate --seed
 ./vendor/bin/sail npm install
 ./vendor/bin/sail npm run dev
-
+```
 
 🌐 Acesso
 URL: http://localhost
@@ -110,12 +112,14 @@ Senha: password123
 
 🐳 Comandos Sail
 Comando	Descrição
+```
 sail up -d	Inicia containers
 sail down	Para containers
 sail artisan [cmd]	Executa Artisan
 sail npm [cmd]	Executa NPM
 sail shell	Acessa container
 sail logs	Visualiza logs
+```
 🗃️ Banco de Dados
 Tabelas Principais
 atrasos - Registro de ocorrências
@@ -127,17 +131,19 @@ projetos - Cadastro de projetos
 notificacoes - Sistema de alertas
 
 Migrations
+```
 bash
 ./vendor/bin/sail artisan migrate
 ./vendor/bin/sail artisan migrate:rollback
 ./vendor/bin/sail artisan migrate:fresh --seed
+```
 🧪 Testes
 bash
 # Executar testes
-./vendor/bin/sail test
+```./vendor/bin/sail test```
 
 # Testes com cobertura
-./vendor/bin/sail test --coverage
+```./vendor/bin/sail test --coverage```
 
 # Testes específicos
 ./vendor/bin/sail test --testsuite=Unit
