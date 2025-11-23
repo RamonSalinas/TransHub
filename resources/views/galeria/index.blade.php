@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Galeria & Contato - TransUFOB')
+@section('title', 'Galeria & Contato - TransHUB')
 
 @section('content')
 <div class="row">
     <div class="col-12">
-        <h1><i class="bi bi-images"></i> Galeria do Projeto</h1>
-        <p class="lead">Fotos, vídeos e informações de contato do projeto TransUFOB</p>
+        <h1><i class="bi bi-images"></i> Galeria do Projeto </h1>
+        <p class="lead">Fotos, vídeos e informações de contato do projeto TransHUB</p>
     </div>
 </div>
 
@@ -32,13 +32,7 @@
     </div>
     @endforeach
     
-    <div class="col-12 text-center mt-3">
-        <div class="alert alert-info">
-            <i class="bi bi-info-circle"></i>
-            Adicione suas fotos reais na pasta <code>public/images/galeria/</code>
-        </div>
-    </div>
-</div>
+
 
 <!-- Seção de Vídeos -->
 <div class="row mb-5">
@@ -129,7 +123,7 @@
                 <h4><i class="bi bi-info-circle"></i> Sobre o Projeto</h4>
             </div>
             <div class="card-body">
-                <p>O <strong>TransUFOB</strong> é um projeto educacional que transforma dados reais do transporte público em oportunidades de aprendizagem.</p>
+                <p>O <strong>TransHUB</strong> é um projeto educacional que transforma dados reais do transporte público em oportunidades de aprendizagem.</p>
                 
                 <h6>Principais Objetivos:</h6>
                 <ul>

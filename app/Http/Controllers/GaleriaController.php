@@ -12,13 +12,13 @@ class GaleriaController extends Controller
             [
                 'titulo' => 'Laboratório de Dados - Alunos em Ação',
                 'descricao' => 'Estudantes analisando dados reais do transporte público',
-                'url' => '/images/galeria/laboratorio.jpg',
+                'url' => '/images/galeria/alunos.jpg',
                 'tipo' => 'foto'
             ],
             [
                 'titulo' => 'Processamento de Mensagens WhatsApp',
-                'descricao' => 'Algoritmo em Python processando 1.847 mensagens',
-                'url' => '/images/galeria/alunos.jpg',
+                'descricao' => 'Algoritmo em Python processando 10.847 mensagens',
+                'url' => '/images/galeria/whatssap.png',
                 'tipo' => 'foto'
             ],
 
@@ -34,7 +34,7 @@ class GaleriaController extends Controller
         $videos = [
             [
                 'titulo' => 'Vídeo Demonstrativo do Projeto',
-                'descricao' => 'Demonstração completa do sistema TransUFOB',
+                'descricao' => 'Demonstração completa do sistema TransHUB',
                 'url' => 'https://www.youtube.com/embed/L9xs2N4vs_w',
                 'tipo' => 'video'
             ],
@@ -50,10 +50,10 @@ class GaleriaController extends Controller
         ];
 
         $contato = [
-            'email' => 'transufob@ufob.edu.br',
-            'telefone' => '(77) 99999-9999',
+            'email' => 'ramon.franco@ufob.edu.br',
+            'telefone' => '(77) 98252-1234',
             'responsavel' => 'Professor Responsável Ramon Adrian Salinas Franco',
-            'github' => 'https://github.com/seu-usuario/transufob'
+            'github' => 'https://github.com/RamonSalinas/TransHUB'
         ];
 
         return view('galeria.index', compact('fotos', 'videos', 'contato'));

@@ -3,7 +3,7 @@
 
 
 
-@section('title', 'Dashboard - TransUFOB')
+@section('title', 'Dashboard - TransHUB RASF')
 
 
 @section('styles')
@@ -160,6 +160,146 @@
 @endsection
 
 @section('content')
+
+
+
+<!-- HERO BANNER ULTRA IMPACTANTE -->
+<div class="hero-impact mb-5"
+     style="
+        background: radial-gradient(circle at 20% 20%, #0a1930, #0e233d, #102d4d);
+        border-radius: 22px;
+        padding: 70px 50px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+     ">
+
+    <!-- EFEITO DE LUZ AZUL -->
+    <div style="
+        position: absolute;
+        top: -120px;
+        right: -80px;
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        background: rgba(0,150,255,0.25);
+        filter: blur(120px);
+        z-index: 1;
+     "></div>
+
+    <!-- EFEITO DE LUZ VERDE -->
+    <div style="
+        position: absolute;
+        bottom: -120px;
+        left: -80px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(0,255,170,0.20);
+        filter: blur(120px);
+        z-index: 1;
+     "></div>
+
+    <div class="row align-items-center position-relative" style="z-index: 3;">
+        
+        <!-- Texto e descrição -->
+        <div class="col-lg-7 col-md-7 text-white">
+            
+            <h1 class="fw-bold"
+                style="
+                    font-size: 3rem;
+                    line-height: 1.2;
+                    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+                ">
+                TransHUB – Inteligência para <br>
+                Monitoramento do Transporte Público
+            </h1>
+
+            <p class="mt-3"
+               style="
+                    font-size: 1.25rem;
+                    max-width: 680px;
+                    opacity: 0.9;
+                    line-height: 1.6;
+               ">
+                Plataforma inteligente que analisa atrasos em tempo real,
+                identifica padrões críticos, apresenta desempenho por linha
+                e oferece visualização geográfica avançada para decisões precisas.
+            </p>
+
+            <!-- Botões -->
+            <div class="mt-4">
+
+                <a href="#map"
+                   class="btn btn-primary btn-lg me-3 px-5 py-3"
+                   style="
+                        border-radius: 14px;
+                        background: linear-gradient(135deg, #007bff, #00c6ff);
+                        border: none;
+                        box-shadow: 0 4px 18px rgba(0,150,255,0.6);
+                        font-weight: 600;
+                   ">
+                   Ver Mapa Interativo
+                </a>
+
+                <a href="{{ route('relatorios') }}"
+   class="btn btn-outline-light btn-lg px-5 py-3"
+   style="
+        border-radius: 14px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255,255,255,0.5);
+        font-weight: 600;
+   ">
+   Relatórios Avançados
+</a>
+
+            </div>
+        </div>
+
+        <!-- Imagem principal (flutuante com brilho) -->
+        <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
+            <img src="/images/galeria/onibuszaul.png"
+                 alt="Dashboard Smart Mobility"
+                 style="
+                    width: 100%;
+                    max-width: 430px;
+                    margin-top: 20px;
+                    border-radius: 18px;
+                    box-shadow: 0 12px 35px rgba(0,0,0,0.55);
+                    transform: perspective(1000px) rotateY(-8deg);
+                    transition: transform 0.4s ease;
+                 "
+                 onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.02)'"
+                 onmouseout="this.style.transform='perspective(1000px) rotateY(-8deg)'">
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container-fluid mt-4">
     <!-- Cartões com Estatísticas -->
     <div class="row mb-4">
@@ -167,9 +307,9 @@
             <div class="card stat-card gradient-bg-primary text-white">
                 <div class="card-body text-center">
                     <div class="metric-value">{{ $totalOcorrencias }}</div>
-                    <div class="metric-label">Total de Ocorrências</div>
+                    <div class="metric-label">Total de Ocorrências </div>
                     <div class="mt-2">
-                        <small>+12% vs último mês</small>
+                        <small>+15.4% vs último mês</small>
                         <span class="trend-indicator trend-up">↑</span>
                     </div>
                 </div>

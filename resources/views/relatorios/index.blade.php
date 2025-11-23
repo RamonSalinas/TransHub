@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Relatórios - TransUFOB')
+@section('title', 'Relatórios - TransHUB')
 
 
 @section('content')
@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Relatório TransUFOB - {{ $data_geracao }}</title>
+    <title>Relatório TransHUB- {{ $data_geracao }}</title>
     <style>
   
         .header { 
@@ -130,8 +130,28 @@
     <div class="header">
         <h1>🚍 TRANSITUFOB - RELATÓRIO ANALÍTICO</h1>
         <h3>Monitoramento Inteligente de Mobilidade Urbana | {{ $data_geracao }}</h3>
-        <a href="{{ route('relatorios.pdf') }}" class="btn btn-pdf text-red">
-                    <i class="bi bi-file-earmark-pdf"></i> Baixar Relatório PDF</a>
+        <a href="{{ route('relatorios.pdf') }}" 
+   class="btn btn-pdf"
+   style="
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 26px;
+        font-weight: 700;
+        font-size: 1rem;
+        border-radius: 14px;
+        color: #fff;
+        background: linear-gradient(135deg, #e63946, #b4161b);
+        border: none;
+        box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+        transition: all 0.3s ease;
+   "
+   onmouseover="this.style.boxShadow='0 0 18px rgba(255,0,0,0.85)'; this.style.transform='scale(1.06)'"
+   onmouseout="this.style.boxShadow='0 0 12px rgba(255,0,0,0.4)'; this.style.transform='scale(1)'"
+>
+    <i class="bi bi-file-earmark-pdf" style="font-size: 1.3rem;"></i>
+    Baixar Relatório PDF
+</a>
     </div>
 
     <!-- KPIs Principais -->

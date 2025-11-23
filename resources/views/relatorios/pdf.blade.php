@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Relatório TransUFOB - {{ $data_geracao }}</title>
+    <title>Relatório TransHUB - {{ $data_geracao }}</title>
     <style>
         body { 
             font-family: Arial, sans-serif; 
@@ -272,7 +272,7 @@
     </div>
 
     <div class="footer">
-        <p><strong>Relatório gerado automaticamente pelo Sistema TransUFOB</strong></p>
+        <p><strong>Relatório gerado automaticamente pelo Sistema </strong></p>
         <p>Universidade Federal do Oeste da Bahia - Campus Barreiras/BA</p>
         <p>Projeto Educacional Transformador - {{ $data_geracao }}</p>
         <p style="font-size: 9px; color: #999;">

@@ -61,7 +61,7 @@ class RelatorioController extends Controller
                 ->orderByDesc('total')
                 ->get(),
             'data_geracao' => now()->format('d/m/Y H:i'),
-            'projeto' => 'TransUFOB - Sistema de Monitoramento de Mobilidade'
+            'projeto' => 'TransHUB - Sistema de Monitoramento de Mobilidade'
         ];
 
         // Configurar o PDF para retrato e margens menores

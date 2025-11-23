@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TransUFOB - @yield('title', 'Sistema de Monitoramento')</title>
+    <title>TransHUB - @yield('title', 'Sistema de Monitoramento')</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
@@ -39,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="{{ route('dashboard') }}">
-                🚍 TransUFOB
+                🚍 TransHUB
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -84,7 +84,7 @@
     <footer class="bg-dark text-light mt-5 py-4">
         <div class="container text-center">
             <p class="mb-0">
-                &copy; 2025 TransUFOB - Projeto Educacional Transformador
+                &copy; 2025 TransHUB - Projeto Educacional Transformador
                 <br>
                 <small>Desenvolvido com Laravel Sail & Bootstrap</small>
             </p>
